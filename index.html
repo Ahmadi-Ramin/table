@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="1">Otsikko 1</th>
+                <th colspan="1">Otsikko 2</th>
+                <th colspan="1">Otsikko 3</th>
+            </tr>
+        </thead>
+        <tbody id="taulukko">
+            <tr>
+                <td>Solu 1</td>
+                <td>Solu 2</td>
+                <td>Solu 3</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button type="button" onclick="lisaaRivi()">Lisää rivi</button>
+
+
+
+    <script>
+        function lisaaRivi() {
+            var taulu = document.getElementById("taulukko");
+            var rivi = taulu.insertRow(0);
+            var solu1 = rivi.insertCell(0);
+            var solu2 = rivi.insertCell(1);
+            var solu3 = rivi.insertCell(2);
+            solu1.innerHTML = "Uusi solu1";
+            solu2.innerHTML = "Uusi solu2";
+            solu3.innerHTML = "Uusi solu3";
+        }
+    </script>
+</body>
+
+</html>
